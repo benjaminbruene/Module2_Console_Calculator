@@ -119,7 +119,7 @@ class Program
             }
 
             //Ternary operator example to print the last result
-            string lastDisplay = hasLastResult ? lastResult.ToString("G", CultureInfo.InvariantCulture) : "N/A";
+            string lastDisplay = hasLastResult ? lastResult.ToString("F3", CultureInfo.InvariantCulture) : "N/A";
                 Console.WriteLine($"Last numeric result: {lastDisplay}");
 
             //Control to break out of the program
