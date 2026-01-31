@@ -153,7 +153,7 @@ class Program
         double a = ReadDouble("Enter the first number");
         double b = ReadDouble("Enter the second number");
         double result = a + b;
-        Console.WriteLine($"Result: {a} + {b} = {result}");
+        Console.WriteLine($"Result: {a} + {b} = {result:F3}");
         return result;
     }
 
@@ -162,7 +162,7 @@ class Program
         double a = ReadDouble("Enter the first number");
         double b = ReadDouble("Enter the second number");
         double result = a - b;
-        Console.WriteLine($"Result: {a} - {b} = {result}");
+        Console.WriteLine($"Result: {a} - {b} = {result:F3}");
         return result;
     }
 
@@ -171,7 +171,7 @@ class Program
         double a = ReadDouble("Enter the first number");
         double b = ReadDouble("Enter the second number");
         double result = a * b;
-        Console.WriteLine($"Results: {a} * {b} = {result}");
+        Console.WriteLine($"Results: {a} * {b} = {result:F3}");
         return result;
     }
 
@@ -187,7 +187,7 @@ class Program
         } while (b == 0);
         
         double result = a / b;
-        Console.WriteLine($"Results: {a} / {b} = {result}");
+        Console.WriteLine($"Results: {a} / {b} = {result:F3}");
         return result;
     }
 
@@ -197,7 +197,7 @@ class Program
         double a = ReadDouble("Enter the first number");
         double b = ReadDouble("Enter the second number");
         double result = (a + b) / 2.0;
-        Console.WriteLine($"Average of {a} and {b} is {result}");
+        Console.WriteLine($"Average of {a} and {b} is {result:F3}");
         return result;
     }
 
