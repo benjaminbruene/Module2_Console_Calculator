@@ -64,7 +64,7 @@ class Program
         //Do While loop to handle user input
         do
         {
-            Console.WriteLine("Operations: + - * / avg tax exit");
+            Console.WriteLine("\nAvailable operations:  +  -  *  /  avg  tax  exit");
             Console.Write("Enter an operator: ");
 
             string choice = Console.ReadLine();
@@ -130,7 +130,7 @@ class Program
         } while (continueRunning);
 
         //Display a summary with a for loop
-        Console.WriteLine("===== Session Summary =====");
+        Console.WriteLine("\n===== Session Summary =====");
         int totalOps = 0;
         foreach (var kvp in operationCount)
             totalOps += kvp.Value;
@@ -142,7 +142,7 @@ class Program
         for (int i = 0; i < keys.Count; i++)
             Console.WriteLine($"{keys[i]}: { operationCount[keys[i]]}");
 
-            Console.WriteLine("Thank you for using the console caluculator");
+            Console.WriteLine("Thank you for using the console calculator!!!");
 
     }
 
