@@ -8,7 +8,35 @@ using System.Runtime.CompilerServices;
 class Program
 {
     //Constant for the tax rate
-    private const decimal TaxRate = 0.055m; 
+    private const decimal TaxRate = 0.055m;
+
+    //Helper Methods
+
+    //Method to validate user enterde doubles
+    private static double ReadDouble(string prompt)
+    {
+        while (true)
+        {
+            Console.Write($"{prompt}: ");
+            string input = Console.ReadLine();
+            if (double.TryParse(input, NumberStyles.Float, CultureInfo.InvariantCulture, out var value))
+                return value;
+            Console.WriteLine("Invalid number. Please try again");
+        }
+    }
+
+    //Method to validate user entered decimals
+    private static decimal ReadDecimal(string prompt)
+    {
+        while (true)
+        {
+            Console.Write($"{prompt}: ");
+            string input = Console.ReadLine();
+            if (decimal.TryParse(input, NumberStyles.Number, CultureInfo.InvariantCulture, out var value))
+                return value;
+            Console.WriteLine("Invalid number. Please Try Again");
+        }
+    }
 
     static void Main()
     {
@@ -119,32 +147,6 @@ class Program
     }
 
 
-    //Helper Methods
-
-    //Method to validate user enterde doubles
-    private static double ReadDouble(string prompt)
-    {
-        while (true)
-        {
-            Console.Write($"{prompt}: ");
-            string input = Console.ReadLine();
-            if (double.TryParse(input, NumberStyles.Float, CultureInfo.InvariantCulture, out var value))
-                return value;
-            Console.WriteLine("Invalid number. Please try again");
-        }
-    }
-
-    //Method to validate user entered decimals
-    private static decimal ReadDecimal(string prompt)
-    {
-        while (true) {
-            Console.Write($"{prompt}: ");
-            string input = Console.ReadLine();
-            if (decimal.TryParse(input, NumberStyles.Number, CultureInfo.InvariantCulture, out var value))
-                return value;
-            Console.WriteLine("Invalid number. Please Try Again");
-        }
-    }
 
     //Method to add 2 numbers
     public static double Add() {
